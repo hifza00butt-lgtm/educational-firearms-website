@@ -11,7 +11,7 @@ export default function FamousFirearms() {
       designer: 'Samuel Colt Manufacturing Company',
       significance:
         'The iconic revolver of the American West, this weapon became synonymous with frontier history and remains culturally significant.',
-      image: '/images/colt-single-action-army.png',
+      image: '/images/colt-1873-realistic.png',
       facts: [
         'Known as the ".45 Peacemaker"',
         'Preferred sidearm of lawmen and outlaws in the Old West',
@@ -26,7 +26,7 @@ export default function FamousFirearms() {
       designer: 'Mikhail Kalashnikov',
       significance:
         'The most widely produced and distributed rifle in history, the AK-47 revolutionized rifle design with its simplicity and reliability.',
-      image: '/images/ak47.png',
+      image: '/images/ak47-realistic.png',
       facts: [
         'Over 100 million produced or copied worldwide',
         'Reliable in extreme conditions',
@@ -41,7 +41,7 @@ export default function FamousFirearms() {
       designer: 'Eugene Stoner, ArmaLite',
       significance:
         'The standard rifle of the US military for decades, the M16 and its variants defined modern tactical rifle design.',
-      image: '/images/m16.png',
+      image: '/images/m16-realistic.png',
       facts: [
         'Extensively used in Vietnam War',
         'Pioneered the use of intermediate cartridges in military service',
@@ -56,7 +56,7 @@ export default function FamousFirearms() {
       designer: 'James Paris Lee and Royal Small Arms Factory',
       significance:
         'The primary rifle of the British military for over 60 years, the Lee-Enfield was known for its speed and accuracy.',
-      image: '/images/lee-enfield.png',
+      image: '/images/lee-enfield-realistic.png',
       facts: [
         'Famous for rapid rate of fire when operated skillfully',
         'Used in both World Wars by British and Commonwealth forces',
@@ -71,7 +71,7 @@ export default function FamousFirearms() {
       designer: 'John Garand, Springfield Armory',
       significance:
         'The primary rifle of US forces in WWII, the Garand was the first semi-automatic rifle to be widely adopted by an army.',
-      image: '/images/m1-garand.png',
+      image: '/images/m1-garand-realistic.png',
       facts: [
         'General George S. Patton called it "the greatest battle implement ever devised"',
         'Gas-operated semi-automatic design',
@@ -86,7 +86,7 @@ export default function FamousFirearms() {
       designer: 'Winchester Repeating Arms Company',
       significance:
         'The "gun that won the West," this rifle represented the transition to modern repeating firearms and shaped frontier history.',
-      image: '/images/winchester-1873.png',
+      image: '/images/winchester-1873-realistic.png',
       facts: [
         'First widely successful lever-action repeating rifle',
         'Popular with settlers, hunters, and frontiersmen',
@@ -101,7 +101,7 @@ export default function FamousFirearms() {
       designer: 'John Taliaferro Thompson',
       significance:
         'Iconic submachine gun that revolutionized close-quarters combat and became famous during Prohibition and WWII.',
-      image: '/images/thompson-submachine-gun.png',
+      image: '/images/thompson-realistic.png',
       facts: [
         'Known as the "Tommy Gun"',
         'Legendary in American criminal and military history',
