@@ -2,12 +2,14 @@
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
 
 interface CategoryCardProps {
   name: string
   background: string
   description: string
   context: string
+  image?: string
 }
 
 export default function CategoryCard({
@@ -15,6 +17,7 @@ export default function CategoryCard({
   background,
   description,
   context,
+  image,
 }: CategoryCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -32,9 +35,21 @@ export default function CategoryCard({
   return (
     <div className="group h-full">
       <div className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 h-full flex flex-col hover:shadow-lg hover:shadow-primary/20">
-        {/* Image placeholder */}
-        <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">
-          {categoryEmojis[name] || '🎖️'}
+        {/* Image section */}
+        <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative overflow-hidden">
+          {image ? (
+            <Image
+              src={image}
+              alt={name}
+              fill
+              className="object-cover group-hover:scale-110 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+          ) : (
+            <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
+              {categoryEmojis[name] || '🎖️'}
+            </div>
+          )}
         </div>
 
         {/* Content */}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
 
 interface FirearmCardProps {
   name: string
@@ -9,6 +10,7 @@ interface FirearmCardProps {
   origin: string
   designer: string
   significance: string
+  image?: string
   facts: string[]
 }
 
@@ -18,6 +20,7 @@ export default function FirearmCard({
   origin,
   designer,
   significance,
+  image,
   facts,
 }: FirearmCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -25,9 +28,19 @@ export default function FirearmCard({
   return (
     <div className="group h-full">
       <div className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 h-full flex flex-col hover:shadow-lg hover:shadow-primary/20">
-        {/* Image placeholder */}
-        <div className="w-full h-40 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative overflow-hidden">
-          <div className="text-6xl opacity-40 group-hover:scale-110 transition-transform duration-300">🎖️</div>
+        {/* Image section */}
+        <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative overflow-hidden">
+          {image ? (
+            <Image
+              src={image}
+              alt={name}
+              fill
+              className="object-cover group-hover:scale-110 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          ) : (
+            <div className="text-6xl opacity-40 group-hover:scale-110 transition-transform duration-300">🎖️</div>
+          )}
           <div className="absolute top-0 left-0 right-0 bg-primary/20 backdrop-blur-sm px-4 py-2">
             <p className="text-sm font-semibold text-primary">{year}</p>
           </div>
